@@ -16,3 +16,6 @@ SOLUTION VARCHAR(100), SOLUTIONGIVENBY INT, TKID INT, SOLUTIONDATE DATETIME DEFA
 
 
 alter table employee add  empphoto  varchar(100);
+alter table employee add  empphoto  varchar(100);
+alter table employee add  empphoto  varchar(100);
+alter table employee add  empphoto  varchar(100);
