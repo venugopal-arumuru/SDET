@@ -1,0 +1,57 @@
+-: Exception Handling :- 
+------------------------
+	How to handle errors
+
+Errors are classified into two types
+
+1.  Compile Time Errors
+	these errors occurs at the time of coding / before program execution. 
+			1.  Missing Semi-colon
+			2.  Missing Double Quotes
+			3.  Wrong Syntax
+2.  Run Time Errors
+	these errors occurs at the time of program execution. 
+	these errors occurs whenever user gives wrong input  /  wrong calculation. 
+
+The process of handling run-time errors is a exception handling
+to do this process java provides 5 keywords
+1.  try
+2.  catch
+3.  finally
+4.  throws
+5.  throw
+-----------------------
+try :-  this block is used to detect errors at the time of execution, if any errors found then it will send those errors into catch block. 
+catch :-  this block receives error info from try block then performs alternative action. 
+
+try
+{
+	actual program
+}
+catch(ExceptionName obj)
+{
+	alternative action code
+}
+finally
+{
+	code must execute
+}
+
+Java identifies all the exceptions with a class, these all exception classes are child classes of "Exception" parent class. 
+
+Exception class is able to manage any type of execption. 
+
+one try block can have multiple catch block to handle multiple exceptions. 
+
+-----------------------
+finally :-  this block executes a peice of  code irrespective of an exception. 
+		i.e. the code exist in this block will be run weather program may or may not gets exception. 
+-----------------------
+throw :- it allows to throwing an exception whenever user is needed. 
+		throw new <ExceptionName>("stmt");
+-------------------------
+throws :- it allows to handle exceptions at compile time. 
+void methodname() throws <Exception>
+{
+	
+}
