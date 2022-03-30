@@ -1,0 +1,147 @@
+What is a Java?
+It is a pure object oriented programming language to develop different applications. 
+
+Java has got 3 part
+
+J2SE - java 2 standard edition (core java)
+	Programming Fundamentals
+J2EE - java 2 enterprize edition (adv. java)	
+	Application Development will be done here(web application, desktop application)
+J2ME - java 2 Micro Edition
+	this kind of programming used for developing micro applications.
+		Mobile Apps, Bio-Metric Apps
+-----------------------------------
+to work with java, we need to download and install jdk 8.0 version atleast. 
+to code the programs, we have download eclipse software.
+	"JDK 8.0"
+	"Eclipse"
+
+Java is a platform independent programming language. So that java lang and it's related applications will run on any operating system. 
+
+JVM :-  It is an execution engine for java program. it will take care of how java program will  be executed. 
+Basically Jvm having different operating system envionments. 
+
+JRE :-  it will provide enviorment for java application for an execution, providing library and other need tools. 
+jre managed by jvm. 
+-----------------------------------
+Structure of Java:- 
+-----------------------------------
+
+importing packages
+
+class <classname>
+{
+	public static void main(String[] args)
+	{
+		body of the program
+	}
+	..........................
+}
+
+1. packages are the library files of java. 
+	A package consist  collection of classes and interfaces. 
+	A class consist collection of methods(predefined functions).
+	
+	import packagename;
+ex:-	import java.util.*;  // * represent all the classes. 
+	import  java.util.Scanner; // scanner is a class.
+	java.io, java.sql, ......
+
+2.  Every program starts with a class and identified with classname. 
+3.  program execution will be starts from main() method.
+4.  main() method will not return any value, so that it is preceded with "void".
+5.  static methods will be executed without an object. 
+6.  public specifies  that the methods will be executed inside and outside of the class. 
+--------------------------------------------
+Output Statement :- 
+
+System.out.println()  :-  this statement will print msgs or variable values on moniter line by line. 
+System.out.print()  :-  this statement will print msgs or variable values on moniter side by side.
+--------------------------------------------------------------------------------------------------------
+Data types :- 
+
+there are two types of data types in java. 
+
+1  Value Type		:-
+	this type of data types allow to store values directly in  a variables. 
+	all primitive types are value type. 
+	keywords :-   byte, short, int, long, float, double, char, boolean, .....
+
+	Integer Types :-  byte, short, int, long
+	Decimal Types :-  float, double
+	Character  :-  char
+	Boolean Type(true/false) :-  boolean
+ 
+2. Reference Type 	:-
+	this type of data types allo to store values in the form of object.
+	all user defined data types are reference type.
+	keywords :-  enum, class
+
+What is a variable? 
+	It is a named memory location to store values temp. 
+	
+	<data type>  <variablename>[= <value>];
+
+	int x = 100;
+	float y = 12.45;
+	char  z = 'A';
+----------------------------------------
+Operators :- these are symbols which has specific action b/w operands. 
+
+Arithematic Operators :-  +, -, *, /(div), % (remainder)
+Relational :-   >, <, >=, <=, != (not equals), == (equals)
+Logical :-   && = AND,  || = OR, ! <=>   NOT 
+Unary  :-  ++ increment by 1,  -- decrement by 1
+Assignment :-  =  (to store value in a variable),  +=, -=, *=, /=, %=
+Conditional :-  ? :  (condition) ? <true> : <false>
+Concatenation :-  +, is used to concatenate two strings or String with any other data type value. 
+-------------------------------------------------------
+Input to java program :- 
+
+there is a class by name  "Scanner" is used to input program. 
+
+Steps :- 
+
+1. import java.util package
+	import java.util.Scanner;
+2. Create object for that class in main() method as follows
+	Scanner  <objectname>  = new Scanner(System.in);
+3. Use following methods to read values into variables
+	int  = nextInt()
+	float = nextFloat();
+	double = nextDouble()
+	long = nextLong()
+	byte = nextByte()
+	short = nextShort()
+	Strings  = next(), nextLine()
+-------------------------------------------------------------------
+Simple If :-
+
+if(condition)
+{
+	set of stmts
+}
+--------------------
+if-else 
+
+if(cond)
+{
+	set of stmts-1
+}
+else
+{
+	set of stmts-2
+}
+----------------
+else if 
+
+if(cond-1)
+{
+	set of stmts-1
+}
+else if(cond-2)
+{
+	set of stmts-2
+}
+..............
+..............

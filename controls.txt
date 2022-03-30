@@ -1,0 +1,62 @@
+What is a Loop?
+
+It is the process of repeating a task. 
+
+while loop
+do-while loop
+for loop
+----------------------------
+while loop :-  this type of loop  will execute set of statements until the given condition is true. 
+
+variable initial value
+while(condition)
+{
+	set of statements
+	increment / decrement operations
+}
+
+int x=1;
+while(x<=5)
+{
+	print("Java");
+	x++;  // increment by 1
+}
+
+--------------------
+do - while loop :-  it is as same as while loop but condition will be checked at the end of loop.
+
+
+variable initial value
+do
+{
+	set of statements
+	increment / decrement operations
+}
+while(condition);
+------------------
+for  loop :-  it is also as same as while loop but it has initial value, condition and iterations in a line. 
+
+for(initial value;condition;iteration)
+{
+	body of the loop
+}
+----------------------------------------------
+nested loop :- A loop within the loop 
+purpose of the nested loop is : repeating looping process.
+----------------------------------------------
+Switch :- it is meant for checking multiple conditions on single variable weather value is equal or not. 
+
+switch(variable)
+{
+	case <val-1>:
+		set of stmts
+		break;
+	case <val-2>:
+		set of stmts
+		break;
+	................
+	................
+	default:
+		set of stmts
+		break;
+}
