@@ -1,0 +1,131 @@
+
+Object Oriented Programming Strucure(OOPS): -
+---------------------------------------------
+it is a programming methodology to provide security for the data while developing applications.
+
+Object 
+Class
+Data Abstraction
+Data Encapsulation
+Inheritance
+Polymariphsum
+
+Object :- it is a thing in the real world which has set of attributes and actions. 
+
+if car is an object, 
+
+car : attributes
+	model
+	number
+	owner
+	color
+	capacity
+car : action
+	driving
+
+All the objects are instances of their parent units. 
+here that parent units are called as "Class". 
+---------------------------------------------------------
+Class :- it is an encapsulated cell which meant for defining attributes and methods of an object. 
+		or
+	it is an blue print for an object. 
+
+class  <class name>
+{
+	variables (Data Members)
+	methods (Member function =  user defined functions)
+}
+
+-------------------
+class  DemoClass
+{
+	int x, y;
+
+	void getdata()
+	{
+		x = 10;
+		y = 20;
+	}
+
+	void putdata()
+	{
+		println(x);
+		println(y);
+		println(x+y);
+	}
+}
+----------------------------------
+Object :- It is an instance of the class. 
+		or 
+	It is variable for user defined data type(class). 
+
+<classname>  <object>  = new <Classname>([parameters]);
+
+an object of class will be created within the class if it consist of main method /  in some other class where main method exist. 
+
+for a class any number of objects will be created. 
+once object created, with that object class members can be accessed. 
+		object.membername(variable/method)
+-------------------------------
+Access Spacifiers :-  
+these are the keywords which speicifies how to access class members inside and outside of the class. 
+
+private  :-  these members are used only inside the class.
+public   :-  these members are used inside and outside the class. 
+protected :- these members are used from one class to another specific class. 
+
+by default every class member is a public. 
+-----------------------------------------------------
+Classification of Members in class :-  A class consist of two types of members 
+1. Non-Static Members
+this type of members are binded with class object, these are used whenever we need multiple copies of data and it's action.
+2. Static Members
+this type of members are binded with class only, these are used whenever we need single copy of data and it's action.
+by using static keyword, we declare or define members inside the class. 
+
+1. A  static method can handle only static variables whereas non-static method can handle both static and non-static
+2. A static method can be called with classname.
+------------------------------------------------------
+Constructor :- 
+It is a special method of the class which has same name of class. 
+
+purpose :  to specify initial process for an object of the class. i.e. initializing class variables
+
+1.  it will execute automatically whenever object is created for the class. 
+2.  it can take arguments and can have multiple constructors inside the class. 
+
+classname([arguments])
+{
+	......
+}
+------------------------
+this :-  it is used to separate class variable and parameter variables when those are same. 
+		this.classvariable = parametervariable
+--------------------------------
+
+A class can have multiple constructors, here every constructor should have different no of parameters. 
+----------------------------
+Inheritance :- it is the process of getting features from existing item to new item.
+Here Existing Item and New Item both are classes. 
+Existing Item :-  Parent / Super / Base classes
+New Item :-  Child / Sub / Derived Classes
+
+inheritance will be done from parent to child class with "extends" keyword. 
+
+class  <child class name>  extends <parent class>
+{
+	body of the class
+}
+
+as per the inheritance  :-  no need to create an object for parent classes, just create object for child class then call the methods from parent and child classes. 
+
+--------------------
+Abstract Class :-  the class which has the body but not allows to create an object. To create this type of classes use "Abstract" keyword for class defintion. 
+
+abstract class allows to declare and define methods.
+
+Final Class :-  this type of classes will not allow to inherit furthur any other classes. 
+use final keyword to create class and these classes allows to create an obj. 
+------------------------
+As per inheritance, parent class constructor will be executed with child class object. 
+if parent and child classes are having constructors, parent cons should call in child class with super() keyword.
