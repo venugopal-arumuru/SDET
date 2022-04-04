@@ -1,0 +1,58 @@
+Exception Handling :- 
+
+generally whenever we are writing program, we commit some mistakes, those are called as errors. 
+
+1.  missing semi-color/double quotes
+2.  invalid usage of syntax 
+3.  spelling mistakes of the commands.
+
+for any programming lang, errors are classified into two types
+
+1.  Compile time 
+	the errors which occurs before executing program / at the time of compilation
+2.  Run time
+	the errors which occurs at the time of program execution. 
+
+As per Java, Exception handling is meant for handling of Run-Time errors. 
+
+to work with this topic,  java provides following keywords
+
+1. try      :-   this block is used to detect an exception at the time program execution, if exception found, it will 			send to catch block.
+2. catch    :-   this block is used to recieve exception information from try block and allows to perform alternative 			action. 
+
+try 
+{
+	actual program
+}
+catch(ExcepionName obj)
+{
+	alternative action
+}
+
+java identifies all the exception with a predefined class, all the classes are child classes of Exception parent class. 
+Exception classes can handle anytype of exception. 
+
+One try block can have multiple catch block to handle each exception separately. 
+
+3. finally
+this block is used to execute a block of statements irrespective of an exception. 
+i.e.  weather program may or may not raise an exception, this block will be executed. 
+---------------------
+Classification of Exception :-  As per java there 3 types of exceptions
+	a.  Unchecked Exceptions :- these exceptions are handled at the time of program execution only. 
+					to handle this, use try-catch blocks.
+	b.  Checked Exceptions   :- these exceptions are handled at the time of program coding. 
+					to handle this, use "throws" keyword. 
+			void methodname([....])  throws <exceptioname>
+			{
+				...................
+			}
+	c.  User-Defined Exceptions :-  the exceptions created by the user as per requirement and handled by the user 					is called user-defined exceptions
+				to raise user defined exception whenever user needed, use "throw" keyword.
+
+				throw  new <ExceptionName>("message");
+4. throws
+5. throw 
+--------------------------
+how to stop program execution in the middle of the program. 
+Ans:- raise an exception whenever we need to stop program execution.
