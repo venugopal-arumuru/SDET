@@ -1,0 +1,95 @@
+Input Output Streams (IO Streams)
+
+What is  meant by a Stream ?
+
+It is a sequence of bit and bytes flowing from one medium to another medium. 
+
+there are standard streams provided by the Java
+
+System.in  :-  standard input stream(keyboard)
+System.out :-  standrad output stream (moniter)
+System.err :-  standard error stream
+
+streams are classified into two types
+
+1. InputStream :-  it is an abstract class which has some child classes.
+			FileInputStream
+			ByteArrayInputStream
+			PipedInputStream
+
+read() :-  it allows to read char from input stream and returns it's ascii value. 
+	when it reach end of input stream it returns -1 value. 
+
+close() :-  it allows to close input stream once all the tasks done. 
+	
+2. OutputStream  :-  it is also an abstract which has some child classes. 
+			FileOutputStream
+			ByteArrayOutputStream
+			PipedOutputStream
+
+write(int) :-  it allows to write character in the form of ascii on output stream. 
+write(byte[] ) :- it allows to write characters in the form of bits and bytes on output stream. 
+close() :-  it allows to close output stream once all the tasks done.
+----------------------------------------------------------------
+File Input/Output Streams:- 
+
+these streams are used to perform some operations on files(like writing data / reading data / .....)
+
+FileOutputStream :-  this class allows to create a file and writing data into that file. 
+it will throws an IOException.  it write data in bits and byte(binary format). 
+
+FileOutputStream  <object> =new FileOutputStream("File Name");
+
+-------------------
+FileInputStream:-  this class allows to read data from file byte by byte(char by char)from input stream.
+
+FileInputStream  <obj> = new FileInputStream(filename);
+
+-------------------------
+FileWriter & FileReader :- 
+
+FileWriter :-  it allows to write data into file in the form of character stream.
+it will allow append data also. 
+
+FileWriter <object > = new FileWriter(filename, true/false)
+
+true :-  append mode
+false :- write mode
+
+FileReader :-  it allows to read data from file line by line. 
+
+FileReader  <object> = new FileReader("File Name");
+
+BufferedReader :-  it is having a method readLine() to read data from input stream line by line.
+
+BufferedReader <object> = new BufferedReader(FileReaderObj);
+---------------------------------------
+File :-  it allows to perform different operations on disk file system. 
+
+File  <object> =new File(filename/foldername/location)
+
+methods :-
+
+createNewFile() :-  it allows to create empty file.
+		fileObj.createNewFile()
+mkdir() :-  it allows to create a folder. 
+		fileObj.mkdir()
+delete() :-  it allows to delete a file/folder. if it is folder, it must be empty. 
+		fileObj.delete()
+exists() :-  it will check existancy of the file or folder. 
+		fileObj.exists()
+isFile()  :-  it will check given name is a file or not
+		fileObj.isFile()
+isDirectory() :- it will check given name is a folder or not
+		fileObj.isDirectory()
+these all methods returns boolean value true/false. 
+list() :-  it will return all the file and foldernames from speicified location and stores into an array. 
+	String[] arr = fileObj.list()
+------------------------------
+PrintStream :-  it allows to perform an action of other output streams. 
+PrintStream <obj> = new PrintStream(outputstream obj);
+
+println()
+print()
+printf()
+----------------------------------------------------------------
