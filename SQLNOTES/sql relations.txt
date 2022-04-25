@@ -1,0 +1,79 @@
+topic :-  table creation using relationship(foreign key):-
+----------------------------------------------------------
+Data using in  a table will be divided into two types. 
+
+1.  Master Data(Parent info)
+2.  Transactional Data(Child info)
+
+relationships are 4 types
+
+1-1 relationship(1 parent table - 1 child table)
+1-many relationship (1 parent table - many child tables)
+many - many relationship (many parent tables - many child tables)
+many - 1 relationship (many parent tables - 1 child table)
+
+steps :- 
+1. parent and  child tables should have common column. 
+2. in parent table common column should have primary key.
+3. in child table common column will be come as  foriegn key. 
+------------------------------------------------------------------
+
+Create table <table name>(col-1 <data type> [constraint], 
+.........................
+........................
+foreign key (<colname>) references parent_table_name(common col name),....);
+
+
+Create table customers(accno varchar(6) primary key, 
+customername  varchar(20),  location varchar(10) default 'Hyderabad');
+
+Create table Acc_trans(sno int auto_increment primary key,
+transtype  varchar(10),  transamt  float, accno varchar(6), currbal  float, 
+foreign key(accno)  references customers(accno));
+--------------------------------------------
+
+4.  Add rows to parent table first then add rows to the child table.
+
+Insert into customers(accno, customername) values('ACC001', 'Praveen Kumar'),
+('ACC002', 'Pavan Kumar'),('ACC003', 'Pavani');
+
+insert into Acc_trans(transtype, transamt,currbal, accno) values
+('Debit', 10000.00, 89000.00, 'ACC002');
+
+5. when it comes to delete operation of parent table, rows cannot be deleted until deleting rows from child table of it's dependency.
+
+on delete cascade/ on update cascade :-  these two options will be refelected automatically on child table when we perform any update / delete on parent table.
+
+create table biodata(rollno int primary key, sname varchar(20),  course varchar(20), 
+location varchar(10) default 'hyd');
+
+insert into biodata(rollno, sname, course) values(101, 'Kiran', 'Python'),
+(102, 'Karan', 'Java'),
+(103, 'Komali', 'Oracle');
+
+create table marks(sno int auto_increment primary key, 
+rollno int,  exam varchar(10), total int, 
+foreign key(rollno)  references biodata(rollno) on delete cascade);
+
+insert into marks(rollno, exam, total) values(101, 'Qtryly', 200),
+(102, 'Qtryly', 180),
+(103, 'Qtryly', 190),
+(102, 'Halfy', 210),
+(103, 'Halfy', 220),
+(101, 'Halfy', 230);
+--------------------------------------------
+Adding foreign key after creating tables :- 
+
+create table books(bookno int primary key, 
+bookname varchar(20), author  varchar(20));
+
+create table members(memno int primary key, 
+membername varchar(20), location  varchar(20));
+
+create table issuedbooks(sno int auto_increment primary key, 
+bookno int, memno int, issueddate date);
+
+alter table  issuedbooks add foreign key(bookno)  references books(bookno) on delete cascade;
+
+alter table  issuedbooks add foreign key(memno)  references members(memno) on delete cascade;
+---------------------------------------------------------------------

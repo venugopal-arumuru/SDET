@@ -1,0 +1,213 @@
+DBMS :-  Database Management System
+--------------------------------------------
+Data :- It is a collection of Raw facts
+Process :-  It is the work doing using data
+Information :-  processed data. 
+
+	Data  ==>   Process ==>  Information
+	Input ==>   Process ==>  Output
+
+Table :-  Collection of Rows and Columns.
+
+Database :- it is a collection of raw facts organised in a structural format(table) of an entity (Student, School/College/Bank). 
+
+Student :- 
+	Biodata
+	Marks
+	Attendance
+	Sport/Games
+	Course and Fees
+(or)
+	Collection of Inter-related tables/data of an entity is also called a database.
+--------------------------------
+Data Can be stored in two ways :- 
+
+1.  File Processing System (File Management System) it will have some limitations which 
+as follows :- 
+
+a) No Security
+b) Limited Data Storage
+c) Manual Retrival Process
+d) Duplication of Data
+
+2.  Database Processing System(Database Management System)
+	It will solve all the limitations of File Process System.
+a)  Full Security for the data(Only Authorised Person can use data)
+b)  No limit to store data
+c)  Query Language(SQL) 
+d)  Data Reduendncy
+----------------------------------------------------------------------------------------
+What is a Database Management System(DBMS):-
+It is a software which allows to create and managing the databases. It will provide set of rules to work and manage database. 
+
+There is types of DBMS :- 
+
+RDBMS :-  Relational DBMS
+
+Related RDBMS :-  
+we have some softwares, MySQL, SQL Server, Oracle, Postgre SQL, MongoDb,.....
+-----------------------------------------------------------------------------------------
+MySQL :- 
+
+What is a MySQL :-  it is a RDBMS based Progammable Package. 
+
+Every RDBMS Software having two sections
+
+1.   SQL (Structured Query Langauge)
+2.   T-SQL (Transact - SQL)  // Programming
+
+
+What is an SQL?
+It  is  a universal langauge for databases. It is also called as Non-Procedural Lang. 
+i.e. it is having some collection of commands.
+
+there are different type of commands :- 
+
+1.  Data Defintion Language(DDL) Commands :- these commands are used to define database structure, modify and delete.
+	CREATE, ALTER, DROP
+2.  Data Manipulation Language(DML) Commands :-  these commands are used to perform operations  on data rows.
+	INSERT, UPDATE, DELETE
+3.  Data Retrival laguauge(DRL) :-  it is used to retrive data from table(s)
+	SELECT
+4.  Data Control Language (DCL) :-  these are used to give permissions / withdraw permission from user to user.
+	GRANT, REVOKE
+5. Transact Control Lang (TCL) :-  these are used after using DML Operations.
+	COMMIT, ROLLBACK
+----------------------------------------
+Once install mysql, it can be used in two ways:-
+
+1.  Command Prompt
+2.  GUI (Enviornment) :- MySQL Workbench 
+-------------------------------------------------------
+What is a Database?
+
+As per MySQL, It is a Collection of Objects, An object is a data item in database to store particular type of data. 
+
+Tables, Views, Synonyms, Indexes, Functions, Procedures,......
+
+these all objects comes under one unit called as "Database"
+
+Create Database  <database>;
+
+to display All databases,  "Show Databases;"
+
+use :-  to change from one database to another database.
+
+use  <database name>;
+
+how to create a table?
+
+Create table <table name>(
+colname-1  <data type>  [constraint], 
+colname-2  <data type>  [constraint], 
+........................
+colname-n  <data type>  [constraint]);
+
+note:- table name and column name must be one word.
+
+Data Types :- 
+
+int  =  for numeric columns
+float =  for numeric columns  with decimals
+char  =  for string columns with fixed length  (255 char max)
+varchar  =  for string columns with variable length (1024 char max)
+date  = for date columns
+time = for time coulmns
+datetime = for both date and time
+-------------------------------------
+studentname char(20)  
+studentname varchar(20)
+--------------------------------------
+Create table  Emp(empno int, ename varchar(20),  job  varchar(20), sal int, location  varchar(15));
+
+Create  table biodata(rollno  int, stdname  varchar(20),  gender char(1), birthdate date);
+----------------------------------------------------------------------------
+INSERT :-  THIS COMMAND IS USED TO ADDING NEW ROWS TO THE TABLE. 
+
+INSERT INTO <TABLE NAME>(COL1, COL2, .....)  VALUES(VAL1, VAL2, ....);
+
+NOTE :-  STRING AND DATE VALUES SHOULD ENCLOSE WITHIN THE SINGLE QUOTOES
+AS PER MYSQL, DATE FORMAT IS "YYYY-MM-DD"
+
+INSERT INTO EMP(EMPNO, ENAME, JOB, SAL,LOCATION) VALUES(1001, 'KIRAN KUMUR', 'MANAGER', 10000, 'HYDERABAD');
+
+TO SHOW ALL ROWS FROM TABLE
+SELECT * FROM EMP;
+-------------------
+DESCRIBE :-  IT ALLOWS TO DISPLAY STRUCTURE OF TABLE.
+DESCRIBE  <TABLE NAME>
+---------------------------------------------------------
+Constraints :-  It is a rule to implement on table column. 
+Null		:-  it allows to have empty values in table columns.
+			by default every column having null constraint.
+Not Null 	:-  it will not allow empty values.
+Unique		:-  it will not allow duplicate values.
+Primary Key	:-  it is a combination of not null and unique. Every table allows to have only one primary key constraint.
+Check		:-  it will cehck specific values or range of values.
+Default		:-  it allows to set default value for a colum while creating table.
+Foriegn key	:-  it will allows to create a relationship tables.
+-----------------------------------------------
+CREATE TABLE STDINFO(ROLLNO INT PRIMARY KEY, STDNAME VARCHAR(20) NOT NULL, 
+GENDER CHAR(1) CHECK GENDER('M','F'), LOCATION  VARCHAR(10)  DEFAULT 'HYDERABAD');
+------------------------
+CREATE TABLE MARKS(ROLLNO INT PRIMARY KEY, SNAME VARCHAR(20) NOT NULL, 
+EXAM  VARCHAR(10), SUB1 INT, SUB2 INT, TOTAL INT, AVGR FLOAT, RESULT  CHAR(4));
+
+INSERT INTO MARKS(ROLLNO, SNAME, EXAM, SUB1, SUB2) VALUES(11, 'NARESH', 'QTRLY', 45,56),
+(12, 'MAHESH', 'QTRLY', 65,86),(13, 'RAMESH', 'QTRLY', 15,76),
+(14, 'SURESH', 'QTRLY', 45,26),(16, 'LOKESH', 'QTRLY', 66,96);
+-----------------------------------------------
+UPDATE :-  IT ALLOWS TO MODIFY ROW VALUES/PERFORMS SOME CALCULATIONS.
+
+UPDATE  <TABLE NAME>  SET  <COLNAME>=<VALUE/EXPRESSION> [WHERE CLAUSE];
+
+UPDATE MARKS SET TOTAL = SUB1+SUB2;
+
+UPDATE MARKS SET  AVGR = (SUB1+SUB2)/2.0;
+
+WHERE CLAUSE IS MEANT FOR SPECIFING CONDITIONS
+
+UPDATE  MARKS SET RESULT = 'PASS' WHERE SUB1>=35 AND SUB2>=35;
+
+UPDATE  MARKS SET RESULT = 'FAIL' WHERE SUB1<35 OR SUB2<35;
+
+UPDATE MARKS SET SNAME = 'SURESH KUMAR' WHERE ROLLNO=14;
+
+NOTE :-  IN DATABASE SYSTEM'S NO AUTOMATIC UPDATIONS. 
+-----------------------------------------------------------------------
+DELETE :-  IT ALLOWS TO DELETE ALL THE ROWS / SPEICIFIC ROWS OF TABLE.
+
+DELETE FROM <TABLE NAME> [WHERE CLAUSE]
+DELETE FROM STDINFO;  // DELETING ALL THE ROWS
+DELETE FROM STDINFO WHERE ROLLNO = 101; // DELETE'S A ROW FROM TABLE
+-------------------
+DROP :-  THIS COMMAND IS USED TO DELETE A TABLE ITSELF. 
+DROP TABLE <TABLE NAME>;
+DROP TABLE EMP;
+--------------------------------------------------------------------
+ALTER :-  IT ALLOWS TO MODIFY  STRUCTURE OF TABLE. 
+1.  ADDING NEW COLUMNS
+2.  MODIFING EXISTING COLUMN DATA TYPES
+3.  DROP EXISTING COLUMNS
+4.  ADDING PRIMARY KEY CONSTRAINT
+5.  DROPING PRIMARY KEY
+
+ALTER TABLE <TABLE NAME> ADD/MODIFY/DROP <EXPRESSION>
+1. ADDING NEW COLUMN
+ALTER TABLE BIODATA ADD  PINCODE  CHAR(6)
+
+2.  DROPING COLUMN
+ALTER TABLE BIODATA DROP COLUMN BIRTHDATE;
+
+3.  MODIFING EXISTING COULMN DATA TYPE
+ALTER TABLE BIODATA MODIFY GENDER VARCHAR(6);
+
+4. ADDING PRIMARY KEY CONSTRAINT
+ALTER TABLE BIODATA ADD PRIMARY KEY(ROLLNO);
+
+5. DROPING PRIMARY KEY
+ALTER TABLE BIODATA DROP PRIMARY KEY;
+
+6. RENAME A COLUMN
+ALTER TABLE BIODATA RENAME COLUMN OLDNAME TO NEWNAME;
+--------------------------------------------------------------------
