@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+<!-- 
+<bean id="Objectname"  class="javaclassname including package">
+	<property name="variablename"  value="val to be given" />
+</bean>
+ -->
+ 
+ <bean id="stdObj"  class="com.fw.beans.Student">
+ 	<property name="rollno"  value="1001" />
+ 	<property name="sname"  value="Sahasra" />
+ 	<property name="course"  value="JAVA" />
+ 	<property name="fees"  value="15000.00" />
+ </bean>
+ 
+</beans>
