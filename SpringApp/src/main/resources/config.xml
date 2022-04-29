@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+   <bean  id="stdObj"  class="com.spring.beans.Student">
+   		<property name="sname"  value="Sahasra" />
+   		
+   		<property  name="qualification">
+   			<list>
+   				<value>B.Tech</value>
+   				<value>M.Tech</value>
+   			</list>   		
+   		</property>
+   		
+   		<property name="courses">
+   			<set>
+   				<value>Java</value>
+   				<value>MySQL</value>
+   				<value>Spring</value>
+   			</set>
+   		</property>
+
+   		<property  name="course_and_faculty">
+   			<map>
+   				<entry  key="Java"  value="Satyam" />
+   				<entry  key="MySQL"  value="Ramana" />
+   				<entry  key="Spring"  value="Rakesh" />
+   			</map>
+   		</property>
+
+		<property name="course_and_cost">
+				<props>
+					<prop key="Java">15000.00</prop>
+					<prop key="MySQL">5000.00</prop>
+					<prop key="Spring">20000.00</prop>
+				</props>
+		</property>   		
+   </bean>
+
+</beans>

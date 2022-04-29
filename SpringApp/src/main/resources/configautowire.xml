@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+   
+	<bean id="adrs"  class="com.spring.autowireing.Address">
+		<property  name="houseno"  value="1-121-A" />
+		<property  name="location"  value="Hyderabad" />
+		<property  name="state"  value="Telanagana" />
+	</bean>
+
+	<bean id="adrs2"  class="com.spring.autowireing.Address">
+		<property  name="houseno"  value="1-121-A" />
+		<property  name="location"  value="Hyderabad" />
+		<property  name="state"  value="Telanagana" />
+	</bean>
+
+	<bean id="empObj" class="com.spring.autowireing.Employee" autowire="byName">
+		<property  name="eno"  value="1001" />
+		<property  name="ename"  value="Renuka Devi" />
+	</bean>
+</beans>
