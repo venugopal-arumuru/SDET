@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC  
+ "-//Hibernate/Hibernate Mapping DTD 5.3//EN"  
+ "http://hibernate.sourceforge.net/hibernate-mapping-5.3.dtd">
+ 
+ <hibernate-mapping>  
+  <class name="com.java.hiber.Employee" table="empinfo">  
+    <id name="empno"> <!--  will set primary key -->  
+     <generator class="assigned"></generator>  
+    </id>              
+    <property name="ename"  column="empname"></property>  
+    <property name="job"></property>
+    <property name="sal" column="salary"></property>              
+  </class>  
+ </hibernate-mapping>  
+ 

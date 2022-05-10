@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-15">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/antlr-2.7.7.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/byte-buddy-1.11.8.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/classmate-1.5.1.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/FastInfoset-1.2.15.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/hibernate-commons-annotations-5.1.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/hibernate-core-5.5.5.Final.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/istack-commons-runtime-3.0.7.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/jandex-2.2.3.Final.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/javassist-3.27.0-GA.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/javax.activation-api-1.2.0.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/javax.persistence-api-2.2.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/jaxb-api-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/jaxb-runtime-2.3.1.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/jboss-logging-3.4.2.Final.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/jboss-transaction-api_1.2_spec-1.1.1.Final.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/mysql-connector-java-8.0.23.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/protobuf-java-3.11.4.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/stax-ex-1.8.jar"/>
+	<classpathentry kind="lib" path="C:/JDBCExamples/hibernate 5.5 jars/txw2-2.3.1.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
